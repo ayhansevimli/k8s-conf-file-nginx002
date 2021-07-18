@@ -28,6 +28,12 @@ kubectl get service
 
 kubectl get pod -o wide
 
+-Get more information deployment and service.
+
+kubectl describe deployment k8s-conf-file-nginx002-deployment
+
+kubectl describe service k8s-conf-file-nginx002-service
+
 
 
 -Delete deployments.
