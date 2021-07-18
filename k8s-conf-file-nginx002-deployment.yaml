@@ -2,14 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: k8s-conf-file-nginx002-deployment
-  labels:  
+  labels:
     app: nginx
 spec:
-  replicas: 2
-  selector: 
+  replicas: 3
+  selector:
     matchLabels:
       app: nginx
-
   template:
     metadata:
       labels:
@@ -17,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.20
+        image: nginx:1.14.2
         ports:
         - containerPort: 80
